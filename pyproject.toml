@@ -1,0 +1,23 @@
+[project]
+name = "kata"
+version = "0"
+requires-python = "~=3.13"
+
+dependencies = [
+    "pytest",
+    "mypy",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+# -r N disables the post-test summary
+addopts = ["--tb=short", "-r N"]
+python_files = "test*.py"
+
+[tool.mypy]
+strict = true
+
+[tool.pyright]
+typeCheckingMode = "strict"
